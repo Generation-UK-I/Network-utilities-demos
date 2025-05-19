@@ -21,6 +21,7 @@ NMap is a network discovery tool which can be used to identify hosts, their open
 We can give it a try using our CentOS VM, but we need to change some settings from their defaults in VirtualBox. 
 
 - Switch your VM network adapter option from `NAT` to `Bridged Adapter`.
+        It is likely that your `first boot` snapshot is from a running VM, but this means that when you launch it the previous configuration it retained by the VM, even though you changed the VirtualBox settings. To fix this simply shutdown your VM **don't restore another snapshot**, and restart. It should then request and receive an IP on your network.
 - You will not be able to connect to `localhost`, so login via vbox window and then check the IP with `ip a`.
 - Connect as normal, but use ssh [**username**]@[**IP address**]
 - Install nmap with `sudo dnf install nmap -y` then try the following commands:
